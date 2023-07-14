@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dga-K0-gII" customClass="CollectionViewCell" customModule="PokeApiTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PL7-Ty-RKZ">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKU-86-CsX">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pokemonLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k92-Yy-PMQ">
+                                <rect key="frame" x="5" y="107" width="140" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="twW-ig-ZDi">
+                                <rect key="frame" x="38" y="18" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="irl-22-uTI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="twW-ig-ZDi" firstAttribute="leading" secondItem="lKU-86-CsX" secondAttribute="leading" constant="38" id="C66-nz-IMC"/>
+                            <constraint firstAttribute="height" constant="150" id="CNW-Ns-f16"/>
+                            <constraint firstItem="k92-Yy-PMQ" firstAttribute="top" secondItem="twW-ig-ZDi" secondAttribute="bottom" constant="14" id="HYY-07-qdC"/>
+                            <constraint firstAttribute="width" constant="150" id="Kfb-dJ-d31"/>
+                            <constraint firstAttribute="trailing" secondItem="k92-Yy-PMQ" secondAttribute="trailing" constant="5" id="bGl-ut-3Dy"/>
+                            <constraint firstAttribute="trailing" secondItem="twW-ig-ZDi" secondAttribute="trailing" constant="37" id="d2U-Sk-WTX"/>
+                            <constraint firstItem="k92-Yy-PMQ" firstAttribute="leading" secondItem="lKU-86-CsX" secondAttribute="leading" constant="5" id="ire-fD-jH6"/>
+                            <constraint firstItem="twW-ig-ZDi" firstAttribute="top" secondItem="lKU-86-CsX" secondAttribute="top" constant="18" id="oaN-4k-4gI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lKU-86-CsX" firstAttribute="top" secondItem="PL7-Ty-RKZ" secondAttribute="top" id="4FT-Gb-M0x"/>
+                    <constraint firstItem="lKU-86-CsX" firstAttribute="leading" secondItem="PL7-Ty-RKZ" secondAttribute="leading" id="PDO-dB-p50"/>
+                    <constraint firstAttribute="trailing" secondItem="lKU-86-CsX" secondAttribute="trailing" id="Win-Mv-KiD"/>
+                    <constraint firstAttribute="bottom" secondItem="lKU-86-CsX" secondAttribute="bottom" id="Xwu-Mj-eJs"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="332" height="232"/>
+            <connections>
+                <outlet property="pokemonImage" destination="twW-ig-ZDi" id="Yz2-Nz-VcA"/>
+                <outlet property="pokemonName" destination="k92-Yy-PMQ" id="OZV-YN-Oxp"/>
+            </connections>
+            <point key="canvasLocation" x="398.47328244274809" y="-208.45070422535213"/>
+        </collectionViewCell>
+    </objects>
+</document>
