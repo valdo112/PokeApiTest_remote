@@ -16,7 +16,7 @@ class BasicInfoViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var abilitiesName: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
+   
     private var networks = Network()
     private var ability = [Ability]()
     private var typeDetails = [TypeDetails]()
@@ -35,6 +35,7 @@ class BasicInfoViewController: UIViewController {
             self.detailPokemon = abilities
             self.abilitiesName.text = self.ability.map({$0.ability.name.capitalized}).joined(separator: ", ")
             self.typesLabel.text = self.typeDetails.map({$0.type.name.capitalized}).joined(separator: ", ")
+            self.nameLabel.text = abilities.name.capitalized
             self.heightLabel.text = "\(self.detailPokemon!.height)"
             self.weightLabel.text = "\(self.detailPokemon!.weight)"
 

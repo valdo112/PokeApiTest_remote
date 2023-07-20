@@ -29,6 +29,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.collectionView.reloadData()
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(subPoke.count)
         return subPoke.count
@@ -79,6 +82,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let call = subPoke[indexPath.row]
         guard let basic = storyboard.instantiateViewController(withIdentifier: "BasicInfoViewController") as? BasicInfoViewController else { return }
         basic.configure(url: call.url)
+//        basic.namePokemon = poke.name
         guard let move = storyboard.instantiateViewController(withIdentifier: "MovesViewController") as? MovesViewController else { return }
         move.configure(move: call.url)
         guard let stat = storyboard.instantiateViewController(withIdentifier: "StatViewController") as? StatViewController else { return }

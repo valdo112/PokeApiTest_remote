@@ -22,7 +22,7 @@ class Network{
                 case .success(let data):
                     do{
                         let jSonData = try JSONDecoder().decode(PokeModel.self, from: data!)
-                        print(jSonData)
+//                        print(jSonData)
                         completion(jSonData)
                     } catch{
                         print(error)
@@ -58,7 +58,7 @@ class Network{
                 case .success(let data):
                     do{
                         let jSonData = try JSONDecoder().decode(DetailPokemon.self, from: data!)
-                        print("fetchAbilities=",jSonData)
+//                        print("fetchAbilities=",jSonData)
                         completion(jSonData)
                     } catch{
                         print(error)

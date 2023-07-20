@@ -17,6 +17,7 @@ struct SubPokeModel: Codable{
 }
 
 struct DetailPokemon: Codable {
+    var name: String
     var abilities: [Ability]
     var sprites: PokemonSprites
     var types: [TypeDetails]
@@ -24,6 +25,7 @@ struct DetailPokemon: Codable {
     var height: Int
     var moves: [Move]
     var stats: [Stat]
+    var id: Int
 }
 
 struct Stat: Codable{
